@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Favourite Person 🥰❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4f81;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #0003;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.heart {
+    position: fixed;
+    color: white;
+    animation: fall 5s linear infinite;
+    font-size: 25px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.card {
+    background: #ffffff22;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 25px;
+    margin: 15px;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #0004;
+}
+
+.big-heart {
+    font-size: 90px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% {
+        transform: scale(1.2);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section>
+    <div class="big-heart">❤️</div>
+
+    <h1>Hey, Birthday Girl !!😍🎀</h1>
+
+    <p>
+        I made a little something special...
+        Just for you ❤️
+    </p>
+
+    <button onclick="playMusic(); nextSection('surprise')">
+        Open Your Surprise 🎁😁
+    </button>
+</section>
+
+
+<!-- MESSAGE -->
+<section id="surprise" class="hidden">
+
+    <h1>Happy Birthday, My Pattukutty!! 😇🫂</h1>
+
+    <div class="card">
+
+        <p>
+            Today is your special day...
+            but honestly, every day became special
+            after you came into my life. 🥹🫀
+        </p>
+
+        <br>
+
+        <p>
+            Thank you for being you.
+            Thank you for all the smiles,
+            memories and little moments
+            that I'll always remember. 🥰🤌🏻
+        </p>
+
+    </div>
+
+    <button onclick="nextSection('memories')">
+        Our Memories 😻🫶🏻
+    </button>
+
+</section>
+
+
+<!-- MEMORIES -->
+<section id="memories" class="hidden">
+
+    <h2>Our Little Memories 😍💟</h2>
+
+    <div class="gallery">
+
+        <!-- CHANGE THESE PHOTO NAMES -->
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+
+    </div>
+
+    <button onclick="nextSection('reasons')">
+        Why I Love You 💌🤗
+    </button>
+
+</section>
+
+
+<!-- REASONS -->
+<section id="reasons" class="hidden">
+
+    <h2>Reasons Why You're Special 🌍</h2>
+
+    <div class="card">
+
+        <p>    Your smile — my favourite view 🫶🏻</p>
+        <p>    The way you care — feels like home 😇✨</p>
+        <p>    The way you love me — feels different 🥹❤️</p>
+        <p>    You proposed first — and stole my heart forever 😌🫀</p>
+        <p>    Simply… you’re my favourite person. 🥰💫</p>
+
+    </div>
+
+    <button onclick="finalSurprise()">
+        One Last Surprise...🤭💋
+    </button>
+
+</section>
+
+
+<!-- FINAL -->
+<section id="final" class="hidden">
+
+    <div class="big-heart">💖</div>
+
+    <h1>Happy Birthday My Future Wifeyy!!😍🤌🏻🫂</h1>
+
+    <div class="card">
+
+        <p>
+            I don't need a perfect life...
+            I just want more beautiful memories
+            with you. ♾️😇
+        </p>
+
+        <br>
+
+        <p>
+            Stay happy. Stay smiling.
+            And never forget how special you are to me. 🥹💘
+        </p>
+
+        <br>
+
+        <h2>Love You Always Bujjuu🤗😻</h2>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function showSurprise() {
+    document.getElementById("surprise")
+    .classList.remove("hidden");
+
+    document.getElementById("surprise")
+    .scrollIntoView({behavior:"smooth"});
+}
+
+function nextSection(id) {
+
+    document.getElementById(id)
+    .classList.remove("hidden");
+
+    document.getElementById(id)
+    .scrollIntoView({behavior:"smooth"});
+}
+
+function finalSurprise() {
+
+    document.getElementById("final")
+    .classList.remove("hidden");
+
+    document.getElementById("final")
+    .scrollIntoView({behavior:"smooth"});
+
+    // Hearts ❤️
+    for(let i = 0; i < 30; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+        heart.className = "heart";
+
+        heart.style.left =
+        Math.random() * 100 + "vw";
+
+        heart.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 7000);
+    }
+}
+
+</script>
+<audio id="bgMusic" loop>
+    <source src="remo_movie_love_bgm.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+</script>
+</body>
+</html>
